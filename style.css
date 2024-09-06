@@ -19,6 +19,26 @@ body{
     " item11  item11  item11 " 400px;
 }
 
+@media screen and (max-width: 727px){
+    .container{
+        grid-template-rows: repeat(11, 1fr);
+        grid-template-columns:repeat(1, 1fr);
+        grid-template: 
+        " item1 " 50px
+        " item2 " 700px
+        " item3 " 400px
+        " item4 " 400px
+        " item5 " 400px
+        " item6 " 600px
+        " item7 " 500px
+        " item8 " 350px
+        " item10 " 500px
+        " item9 " 350px
+        " item11 " 400px;
+    }
+    
+}
+
 .item{
     display: flex;
     justify-content: center;
