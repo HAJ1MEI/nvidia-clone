@@ -1,15 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap');
 body{
-    background-color:lightblue;
+    background-color:white;
     margin: 0;
     padding: 0;
 }
 
 :root{
     --primary-color: #000000;
-    --secondary-color: #cccccc;
+    --secondary-color: #ececec;
     --accent-color: #13a30e;
+    --accent-color2: #616161;
 }
 
 ul{
@@ -32,8 +33,8 @@ a{
     grid-template: 
     " item1  item1  item1 " 40px
     " item2  item2  item2 " 700px
-    " item3  item4  item5 " 400px
-    " item6  item6  item6 " 600px
+    " item3  item3  item3 " 500px
+    " item6  item6  item6 " 470px
     " item7  item7  item8 " 500px
     " item9  item10  item10 " 500px
     " item11  item11  item11 " 400px
@@ -49,9 +50,7 @@ a{
         grid-template: 
         " item1 " 20px
         " item2 " 700px
-        " item3 " 400px
-        " item4 " 400px
-        " item5 " 400px
+        " item3 " 500px
         " item6 " 600px
         " item7 " 500px
         " item8 " 350px
@@ -65,8 +64,8 @@ a{
 
 .item{
     display: flex;
-    justify-content: center;
-    align-items: center;
+    /* justify-content: center;
+    align-items: center; */
     font-family: sans-serif;
     font-size: 1rem;
     font-weight: bolder;
@@ -85,23 +84,14 @@ a{
     grid-area: item2;
 }
 .item3{
-    background-color:red;
     grid-area: item3;
 }
-.item4{
-    background-color:pink;
-    grid-area: item4;
-}
-.item5{
-    background-color:violet;
-    grid-area: item5;
-}
+
 .item6{
-    background-color:indigo;
+    background-color:var(--secondary-color);
     grid-area: item6;
 }
 .item7{
-    background-color:magenta;
     grid-area: item7;
 }
 .item8{
@@ -140,6 +130,7 @@ a{
     align-items: center;
     gap: 6%;
     width: 100%;
+    cursor: default;
 }
 .item1 ul li{
     transition: .1s ease-out;
@@ -238,4 +229,171 @@ a{
     padding: 10px 20px;
     transition: .2s ease-in-out;
     
+}
+
+/* HOMEPAGE FEATURED PRODUCTS SECTION DESIGN */
+.item3{
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    background-color: yellow;   
+}
+
+.m-cards{
+    margin: 0;
+    padding-top: 1%;
+    background-color: white;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.cards{
+    margin: 0;
+    overflow: clip;
+    position: relative;
+    top: 5%;
+    border-radius: 7px;
+    height: 95%;
+    width: 30%;
+    
+}
+
+.card1{
+    margin: 0;
+    border-radius: 7px;
+    background-color: var(--accent-color2);
+    height: 75%;
+    transition: .2s ease-in-out;
+}
+
+.card1:hover{
+    box-shadow: #000000 0px 0px 20px;
+}
+
+.item3 h1{
+    width: 93%;
+    margin-top: .5rem;
+    margin-bottom: .2rem;
+    font-family: Lexend, sans-serif;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+.item3 p{
+    margin:0;
+    width: 93%;
+    font-family: sans-serif;
+    font-weight: 100;
+    color:var(--accent-color2) ;
+}
+
+/* HOMEPAGE NEWS SECTION DESIGN */
+.item6{
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+}
+.item6 h3{
+    text-align: center;
+    font-family: Titillium Web, sans-serif;
+    font-size: 1.3rem;
+}
+.item6 h1{
+    text-align: center;
+    font-family: Lexend, sans-serif;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin: 0;
+    text-decoration: overline;
+}
+.item6 p{
+    text-align: center;
+    margin: 0;
+    font-family: sans-serif;
+    font-size: large;
+    font-weight: 400;
+    color: var(--accent-color2);
+    padding: 1rem;
+}
+.links{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    position: relative;
+    top: 15%;
+}
+.item6 a{
+    font-size: large;
+    color: var(--primary-color);
+}
+#learn-more{
+    border: 3px solid var(--accent-color2);
+    border-radius: 5px;
+    padding: 10px 20px;
+    transition: .2s ease-in;
+}
+#learn-more:hover{
+    border: 3px solid var(--accent-color);
+    box-shadow: var(--accent-color) 0px 0px 5px;
+}
+#see-all{
+    margin-top: 20px;
+    transition: .1s ease-in;
+}
+#see-all:hover{
+    color: var(--accent-color);
+}
+.active{
+    display: flex;
+    justify-content: space-evenly;
+    width: 5%;
+}
+.loading{
+    margin-top: 20px;
+    margin-bottom: 0;
+    background-color: rgb(107, 107, 107);
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+.loading-active{
+    margin-top: 20px;
+    margin-bottom: 0;
+    background-color: var(--accent-color);
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+
+/* HOMEPAGE SECTION 7 DESIGN */
+.item7{
+    background-color: yellow;
+    width: 96%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin: 0;
+    padding: 2rem;
+}
+ .item7 h1{
+    background-color: var(--accent-color);
+    text-align: left;
+    font-family: Lexend, sans-serif;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin: 0;
+} 
+.item7 p{
+    background-color: var(--accent-color2);
+    font-family: sans-serif;
+    font-weight: 100;
+    color: var(--accent-color2);
+    margin: 0;
+    width: 50%;
+} 
+.item8{
+    width: 100%;
 }
