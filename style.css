@@ -26,7 +26,7 @@ a{
 
 .button1{
     background-color: var(--accent-color);
-    padding: 15px 20px;
+    padding: 10px 20px;
     border-radius: 2px;
     transition: .1s ease-out;
 }
@@ -35,7 +35,7 @@ a{
 }
 .button2{
     background-color: white;
-    padding: 15px 20px;
+    padding: 10px 20px;
     border-radius: 2px;
     border: 2px solid var(--accent-color);
     transition: .1s ease-out;
@@ -48,7 +48,7 @@ a{
 .container{
     width: 100%;
     display: grid;
-    grid-template-rows: repeat(8, 1fr);
+    grid-template-rows: repeat(9, 1fr);
     grid-template-columns:repeat(3, 1fr);
     grid-template: 
     " item1  item1  item1 " 40px
@@ -56,14 +56,15 @@ a{
     " item3  item3  item3 " 500px
     " item6  item6  item6 " 470px
     " item7  item7  item7 " 500px
-    " item9  item10  item10 " 500px
+    " item10  item10  item10 " 700px
     " item11  item11  item11 " 400px
+    " item13  item13  item13 " 400px
     " item12  item12  item12 " 400px;
 }
 
 /* HOMEPAGE MOBILE SCREEN LAYOUT */
 
-@media screen and (max-width: 1080px){
+@media screen and (max-width: 727px){
     .container{
         grid-template-rows: repeat(11, 1fr);
         grid-template-columns:repeat(1, 1fr);
@@ -74,8 +75,8 @@ a{
         " item6 " 600px
         " item7 " 500px
         " item10 " 500px
-        " item9 " 350px
         " item11 " 400px
+        " item13 " 400px
         " item12 " 400px;
     }
     
@@ -113,18 +114,17 @@ a{
 .item7{
     grid-area: item7;
 }
-
-.item9{
-    background-color:maroon;
-    grid-area: item9;
-}
 .item10{
-    background-color:palegoldenrod;
+    background-color:rgb(231, 231, 231);
     grid-area: item10;
 }
 .item11{
     background-color:lightcoral;
     grid-area: item11;
+}
+.item13{
+    background-color:red;
+    grid-area: item13;
 }
 .item12{
     background-color:rgb(88, 53, 53);
@@ -234,7 +234,7 @@ a{
 #hp-buy{
     /* background-color: black; */
     border: 3px solid var(--accent-color);
-    border-radius:5px ;
+    border-radius:10px ;
     padding: 10px 20px;
 
 }
@@ -267,7 +267,7 @@ a{
 
 .cards{
     margin: 0;
-    overflow: clip;
+    /* overflow: clip; */
     position: relative;
     top: 5%;
     border-radius: 7px;
@@ -279,13 +279,15 @@ a{
 .card1{
     margin: 0;
     border-radius: 7px;
-    background-color: var(--accent-color2);
+    background-color: white;
     height: 75%;
+    box-shadow: #838383 0px 0px 7px;
     transition: .2s ease-in-out;
 }
 
 .card1:hover{
-    box-shadow: #000000 0px 0px 20px;
+    scale: 1.01;
+    box-shadow: #4b4b4b 0px 0px 9px;
 }
 
 .item3 h1{
@@ -347,13 +349,13 @@ a{
 }
 #learn-more{
     border: 3px solid var(--accent-color2);
-    border-radius: 5px;
+    border-radius: 10px;
     padding: 10px 20px;
     transition: .2s ease-in;
 }
 #learn-more:hover{
     border: 3px solid var(--accent-color);
-    box-shadow: var(--accent-color) 0px 0px 5px;
+    box-shadow: var(--accent-color) 0px 0px 10px;
 }
 #see-all{
     margin-top: 20px;
@@ -423,9 +425,85 @@ a{
     position: relative;
     scale: .5;
     top: -155%;
-    left: 40%;
+    left: 37%;
+    -webkit-filter: drop-shadow(10px 10px 10px #505050);
+    filter: drop-shadow(10px 10px 10px #616161);
 }
 
-.item8{
+/* HOMEPAGE SECTION 10 DESIGN */
+.item10{
+    display: flex;
+    margin: 0;
+    justify-content: center;
+}
+.item10-items{
+    width: 78%;
+    margin: 1.5% 0;
+}
+.item10 h3{
     text-align: center;
+    font-family: Titillium Web, sans-serif;
+    font-size: 1.3rem;
+    margin: 1%;
+}
+.item10 h1{
+    text-align: center;
+    font-family: Lexend, sans-serif;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 2%;
+    text-decoration: overline;
+}
+.card-text{
+    height: 75%;
+    display: flex;
+    justify-content: space-between;
+}
+.card-text-item{
+    position: relative;
+    border-radius: 5px;
+    width: 23%;
+    border: .1px solid rgb(93, 161, 108);
+    box-shadow: #686868 0px 0px 5px;
+    transition: .2s ease-out;
+    cursor: default;
+}   
+.card-text-item:hover{
+    scale: 1.01;
+    box-shadow: #13b135 0px 0px 8px;
+}
+.card-text-item img{
+    width: 100%;
+    border-radius: 5px;
+}
+.card-text-item h1 {
+    margin-left: 4%;
+    margin-top: 0;
+    text-align: left;
+    font-size: x-large;
+    text-decoration: none;
+}
+.card-text-item h3 {
+    margin-bottom: 2%;
+    margin-left: 4%;
+    text-align: left;
+}
+.card-text-item p {
+    margin-top: 3%;
+    margin-left: 4.5%;
+    margin-right: 4.5%;
+    text-align: left;
+    font-weight: 500;
+    color: var(--accent-color2);
+}
+.card-text-item a{
+    position: absolute;
+    top: 92%;
+    text-align: left;
+    margin-left: 3%;
+    font-weight: 900;
+    color: var(--primary-color);
+}
+.card-text-item a:hover{
+    color: var(--accent-color);
 }
