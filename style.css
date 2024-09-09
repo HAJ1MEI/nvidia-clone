@@ -64,7 +64,11 @@ a{
 
 /* HOMEPAGE MOBILE SCREEN LAYOUT */
 
+<<<<<<< HEAD
 @media screen and (max-width: 727px){
+=======
+@media screen and (max-width: 767px){
+>>>>>>> 09ce8860cd8d3e2a8e55503ef5cc6d6682619009
     .container{
         grid-template-rows: repeat(11, 1fr);
         grid-template-columns:repeat(1, 1fr);
