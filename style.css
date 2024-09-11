@@ -4,6 +4,7 @@ body{
     background-color:white;
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
 }
 
 :root{
@@ -31,7 +32,8 @@ a{
     transition: .1s ease-out;
 }
 .button1:hover{
-    background-color: var(--accent-color2);
+    background-color: var(--secondary-color);
+    border: 2px solid var(--accent-color);
 }
 .button2{
     background-color: white;
@@ -57,8 +59,8 @@ a{
     " item6  item6  item6 " 470px
     " item7  item7  item7 " 500px
     " item10  item10  item10 " 700px
-    " item11  item11  item11 " 400px
-    " item13  item13  item13 " 400px
+    " item11  item11  item11 " 560px
+    " item13  item13  item13 " 510px
     " item12  item12  item12 " 400px;
 }
 
@@ -119,15 +121,14 @@ a{
     grid-area: item10;
 }
 .item11{
-    background-color:lightcoral;
     grid-area: item11;
 }
 .item13{
-    background-color:red;
+    background-color:rgb(231, 231, 231);
     grid-area: item13;
 }
 .item12{
-    background-color:rgb(88, 53, 53);
+    background-color:rgb(0, 0, 0);
     grid-area: item12;
 }
 
@@ -506,4 +507,130 @@ a{
 }
 .card-text-item a:hover{
     color: var(--accent-color);
+}
+
+/* HOMEPAGE IMAGE CAROUSEL DESIGN */
+.item11{
+    position: absolute;
+    top: 304%;
+}
+.item11 h1{
+    font-family: Lexend, sans-serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+.item11 p{
+    font-family: Tittilium Web, sans-serif;
+    font-weight: 100;
+    font-size: 1.4rem;
+    color: var(--accent-color2);
+    margin-top: 0;
+    margin-bottom: 3em;
+}
+.item11 a{
+    position: relative;
+    color: var(--primary-color);
+    font-size: 1.2rem;
+    top: 20%;
+    padding-bottom: 1%;
+    border-bottom: 2px solid var(--accent-color);
+}
+.item11 a:hover{
+    border-bottom: 4px solid var(--accent-color);
+
+}
+.carousel{
+    width: 79%;
+    margin-left: 7.4%;
+}
+ .text{
+    /* background-color: yellow; */
+    height: 450px;
+    width: 550px;
+    position: absolute;
+    margin-top: 2%;
+} 
+.carousel-images{
+    padding: 10px;
+    display: flex;
+    gap: 30px;
+    margin-top: 2%;
+    margin-left: 25%;
+    overflow-x: auto;
+    transition: .2s ease-out;
+}
+.carousel-images img{
+    border-radius: 8px;
+    height: 450px;
+    width: 700px;
+    transition: .2s ease-out;
+    box-shadow: 0px 0px 10px #000000;
+} 
+.carousel-images:hover img{
+    filter: grayscale(.8);
+}
+.carousel-images img:hover{
+    scale: 1.01;
+    filter: grayscale(0);
+}
+
+.carousel-images::-webkit-scrollbar{
+    height: 4px;
+    width: 8px;
+}
+.carousel-images::-webkit-scrollbar-thumb{
+    background-color: var(--accent-color);
+    border-radius: 10px;
+}
+.D-S-Image p{
+    position: absolute;
+    color: var(--secondary-color);
+    top: 75%;
+    margin-left: 1%;
+    font-family: Lexend, sans-serif;
+    font-weight: 900;
+    font-size: 1.6rem;
+    width: 20%;
+}
+
+/* HOMEPAGE SECTION 13 DESIGN */
+.item13{
+    position: absolute;
+    top: 361%;
+}
+.item13 h1{
+    font-family: Lexend, sans-serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+.item13 p{
+    font-family: Tittilium Web, sans-serif;
+    font-weight: 100;
+    font-size: 1.4rem;
+    color: var(--accent-color2);
+    margin-top: 0;
+    margin-bottom: 3em;
+}
+.item13 a{
+    position: relative;
+    color: var(--primary-color);
+    font-size: 1.2rem;
+    top: 20%;
+    padding-bottom: 1%;
+    border-bottom: 2px solid var(--accent-color);
+}
+.item13 a:hover{
+    border-bottom: 4px solid var(--accent-color);
+}
+
+/* FOOTER DESIGN */
+.item12{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--secondary-color);
+    font-family: Tittilium Web, sans-serif;
+    font-size: 3rem;
 }
